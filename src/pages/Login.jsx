@@ -1,23 +1,28 @@
 import { FaFacebookF, FaGoogle, FaLinkedinIn } from "react-icons/fa";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+// import { useAuth } from "../context/AuthContext";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const { login } = useAuth();
+  // const { login } = useAuth();
   const nav = useNavigate();
-
+    const adminEamil="admin@gmail.com";
+    const userEmail="user@gmail.com";
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const success=await login({email, password}); // your AuthContext logic
-      if(success){
+      // const success=await login({email, password}); // your AuthContext logic
+      
+      if(email===adminEamil){
 
-        nav("/");
+        nav("/dashbord");
+      }
+      else{
+        nav("/home");
       }
     } catch (err) {
       setError("Invalid email or password",err);
@@ -25,12 +30,12 @@ export default function Login() {
   };
 
   const autoFillAdmin = () => {
-    setEmail("admin@gmail.com");
+    setEmail(adminEamil);
     setPassword("123456789");
   };
 
   const autoFillUser = () => {
-    setEmail("user@gmail.com");
+    setEmail(userEmail);
     setPassword("123456789");
   };
 

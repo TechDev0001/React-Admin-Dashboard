@@ -14,6 +14,7 @@ import Message from "./pages/Message";
 import Notifications from "./pages/Notifications";
 import Settings from "./pages/Settings";
 import Security from "./pages/Security";
+import Home from "./pages/Home/Home";
 
 const Layout = ({ children }) => (
   <div className="flex h-screen overflow-hidden">
@@ -28,9 +29,9 @@ const Layout = ({ children }) => (
 export default function App() {
   return (
     <Routes>
-      <Route path="/login" element={<Login />} />
+      <Route path="/" element={<Login />} />
       <Route
-        path="/"
+        path="/dashbord"
         element={
           <PrivateRoute>
             <Layout>
@@ -69,12 +70,12 @@ export default function App() {
           </PrivateRoute>
         }
       />
-       <Route
+      <Route
         path="/sales"
         element={
           <PrivateRoute>
             <Layout>
-              <Sales/>
+              <Sales />
             </Layout>
           </PrivateRoute>
         }
@@ -84,7 +85,7 @@ export default function App() {
         element={
           <PrivateRoute>
             <Layout>
-              <Analytics/>
+              <Analytics />
             </Layout>
           </PrivateRoute>
         }
@@ -94,18 +95,18 @@ export default function App() {
         element={
           <PrivateRoute>
             <Layout>
-              <Message/>
+              <Message />
             </Layout>
           </PrivateRoute>
         }
       />
 
-       <Route
+      <Route
         path="/notifications"
         element={
           <PrivateRoute>
             <Layout>
-              <Notifications/>
+              <Notifications />
             </Layout>
           </PrivateRoute>
         }
@@ -115,7 +116,7 @@ export default function App() {
         element={
           <PrivateRoute>
             <Layout>
-              <Settings/>
+              <Settings />
             </Layout>
           </PrivateRoute>
         }
@@ -125,8 +126,18 @@ export default function App() {
         element={
           <PrivateRoute>
             <Layout>
-              <Security/>
+              <Security />
             </Layout>
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/Home"
+        element={
+          <PrivateRoute>
+            {/* <Layout> */}
+              <Home />
+            {/* </Layout> */}
           </PrivateRoute>
         }
       />
