@@ -4,6 +4,14 @@ import furn2 from "./allImg/f2.jpg"
 import furn3 from "./allImg/f3.jpg"
 import FeatureBar from "./FeaturBar";
 import PromoGrid from "./PromoGrid";
+import CategoryGrid from "./CategoryGrid";
+import ProductGrid from "./ProductGrid";
+import AudioPromo from "./AudioPromo";
+import { Smartphone } from "lucide-react";
+import SmartphonePromo from "./SmartphonePromo";
+import Testimonials from "./Testimonials";
+import NewsUpdate from "./NewsUpdate";
+import Footer from "./Footer";
 export default function HeroSection() {
   return (
     <section className="relative  h-[90vh] w-full font-sans">
@@ -64,6 +72,13 @@ export default function HeroSection() {
      <FeatureBar/>
 
      <PromoGrid/>
+     <CategoryGrid/>
+     <ProductGrid/>
+     <AudioPromo/>
+     <SmartphonePromo/>
+     <Testimonials/>
+     <NewsUpdate/>
+     <Footer/>
 
     </section>
   );
