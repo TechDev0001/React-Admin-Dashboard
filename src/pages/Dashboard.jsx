@@ -8,11 +8,9 @@ import {
   BarChart,
   Bar,
   Cell,
-  PieChart,
-  Pie,
-  Legend
+  
 } from "recharts";
-import { Search, Settings, Bell } from "lucide-react";
+import {  Settings, Bell } from "lucide-react";
 import { Messages } from "./Dashboard/Messages";
 import { UserSection } from "./Dashboard/UserSection";
 import { ProductsSection } from "./Dashboard/ProductsSection";

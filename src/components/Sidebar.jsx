@@ -22,7 +22,7 @@ const Sidebar = () => {
         {/* <Link to="/" className="flex items-center space-x-2 hover:text-gray-400">
           <Home /> <span>Home</span>
         </Link> */}
-        <Link to="/" className="flex items-center space-x-2 hover:text-gray-400">
+        <Link to="/dashbord" className="flex items-center space-x-2 hover:text-gray-400">
           <LayoutDashboard /> <span>Dashboard</span>
         </Link>
         <Link to="/users" className="flex items-center space-x-2 hover:text-gray-400">

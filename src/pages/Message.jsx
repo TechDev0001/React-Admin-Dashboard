@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 const messages = {
   unread: [
@@ -45,7 +45,7 @@ const messages = {
       title: "Recommended: Server-side Dev with NodeJS, Express and MongoDB",
       preview: "We combed our catalog and found courses…",
       date: "Mar 3",
-      avatar: "https://pbs.twimg.com/profile_images/1565328525283862528/vgEzHEoC_400x400.jpg",
+      // avatar: "https://pbs.twimg.com/profile_images/1565328525283862528/vgEzHEoC_400x400.jpg",
       labels: ["Syllabus"],
       starred: false,
     },

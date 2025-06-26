@@ -11,7 +11,7 @@ export default function Login() {
   // const { login } = useAuth();
   const nav = useNavigate();
     const adminEamil="admin@gmail.com";
-    const userEmail="user@gmail.com";
+    // const userEmail="user@gmail.com";
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -34,10 +34,10 @@ export default function Login() {
     setPassword("123456789");
   };
 
-  const autoFillUser = () => {
-    setEmail(userEmail);
-    setPassword("123456789");
-  };
+  // const autoFillUser = () => {
+  //   setEmail(userEmail);
+  //   setPassword("123456789");
+  // };
 
   return (
     <div className="h-screen w-full bg-[#1A2238] flex items-center justify-center">
@@ -77,13 +77,13 @@ export default function Login() {
               Forget password?
             </a>
             <div className="flex justify-between">
-              <button
+              {/* <button
                 type="button"
                 onClick={autoFillUser}
                 className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-5 md:px-13 rounded transition"
               >
                 User Login
-              </button>
+              </button> */}
               <button
                 type="button"
                 onClick={autoFillAdmin}

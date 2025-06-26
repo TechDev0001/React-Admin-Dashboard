@@ -1,11 +1,11 @@
-import React, { Suspense } from "react";
+import React, {lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 
 // Lazy load only the Dashboard
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
-const Home = React.lazy(() => import('./pages/Home/Home'));
+// const Home = React.lazy(() => import('./pages/Home/Home'));
 
-
+const Analytics = lazy(() => import("./pages/Analytics"));
 import Users from "./pages/Users";
 import Products from "./pages/Products";
 import Orders from "./pages/Orders";
@@ -15,7 +15,7 @@ import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import PrivateRoute from "./routers/PrivateRoute";
 import Sales from "./pages/Sales";
-import Analytics from "./pages/Analytics";
+// import Analytics from "./pages/Analytics";
 import Message from "./pages/Message";
 import Notifications from "./pages/Notifications";
 import Settings from "./pages/Settings";
@@ -33,6 +33,8 @@ const Layout = ({ children }) => (
   </div>
 );
 
+
+
 // Loader fallback component
 const Loader = () => (
   <div className="flex items-center justify-center h-screen">
@@ -46,15 +48,17 @@ export default function App() {
     <Suspense fallback={<Loader />}>
       <Routes>
         <Route path="/" element={<Login />} />
+                <Route path="/login" element={<Login />} />
+
 
         <Route
           path="/dashbord"
           element={
-            <PrivateRoute>
+            // <PrivateRoute>
               <Layout>
                 <Dashboard />
               </Layout>
-            </PrivateRoute>
+            // </PrivateRoute>
           }
         />
         <Route
@@ -147,15 +151,17 @@ export default function App() {
             </PrivateRoute>
           }
         />
-        <Route
+        {/* <Route
           path="/home"
           element={
-            <PrivateRoute>
+            // <PrivateRoute>
               <Home />
-            </PrivateRoute>
+            // </PrivateRoute>
           }
         />
+        */}
       </Routes>
+
     </Suspense>
   );
 }
