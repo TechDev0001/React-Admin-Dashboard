@@ -48,7 +48,7 @@ export default function App() {
     <Suspense fallback={<Loader />}>
       <Routes>
         <Route path="/" element={<Login />} />
-                <Route path="/login" element={<Login />} />
+                {/* <Route path="/login" element={<Login />} /> */}
 
 
         <Route
@@ -64,91 +64,91 @@ export default function App() {
         <Route
           path="/users"
           element={
-            <PrivateRoute>
+            // <PrivateRoute>
               <Layout>
                 <Users />
               </Layout>
-            </PrivateRoute>
+            // </PrivateRoute>
           }
         />
         <Route
           path="/products"
           element={
-            <PrivateRoute>
+            // <PrivateRoute>
               <Layout>
                 <Products />
               </Layout>
-            </PrivateRoute>
+            // </PrivateRoute>
           }
         />
         <Route
           path="/orders"
           element={
-            <PrivateRoute>
+            // <PrivateRoute>
               <Layout>
                 <Orders />
               </Layout>
-            </PrivateRoute>
+            // </PrivateRoute>
           }
         />
         <Route
           path="/sales"
           element={
-            <PrivateRoute>
+            // <PrivateRoute>
               <Layout>
                 <Sales />
               </Layout>
-            </PrivateRoute>
+            // </PrivateRoute>
           }
         />
         <Route
           path="/analytics"
           element={
-            <PrivateRoute>
+            // <PrivateRoute>
               <Layout>
                 <Analytics />
               </Layout>
-            </PrivateRoute>
+            // </PrivateRoute>
           }
         />
         <Route
           path="/messages"
           element={
-            <PrivateRoute>
+            // <PrivateRoute>
               <Layout>
                 <Message />
               </Layout>
-            </PrivateRoute>
+            // </PrivateRoute>
           }
         />
         <Route
           path="/notifications"
           element={
-            <PrivateRoute>
+            // <PrivateRoute>
               <Layout>
                 <Notifications />
               </Layout>
-            </PrivateRoute>
+            // </PrivateRoute>
           }
         />
         <Route
           path="/settings"
           element={
-            <PrivateRoute>
+            // <PrivateRoute>
               <Layout>
                 <Settings />
               </Layout>
-            </PrivateRoute>
+            // </PrivateRoute>
           }
         />
         <Route
           path="/security"
           element={
-            <PrivateRoute>
+            // <PrivateRoute>
               <Layout>
                 <Security />
               </Layout>
-            </PrivateRoute>
+            // </PrivateRoute>
           }
         />
         {/* <Route

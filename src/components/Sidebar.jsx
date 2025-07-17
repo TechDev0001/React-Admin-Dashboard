@@ -52,7 +52,7 @@ const Sidebar = () => {
         <Link to="/security" className="flex items-center space-x-2 hover:text-gray-400">
           <Shield /> <span>Security</span>
         </Link>
-        <Link to="/login" className="flex items-center space-x-2 hover:text-gray-400">
+        <Link to="/" className="flex items-center space-x-2 hover:text-gray-400">
           <LogOut /> <span>Logout</span>
         </Link>
       </nav>
